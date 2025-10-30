@@ -5,7 +5,7 @@ public class FVCalc {
 		Double interest = Double.parseDouble(args[1]);
 		int n = Integer.parseInt(args[2]);
 		int futureValue = (int) (currentValue * Math.pow((interest / 100) + 1, n));
-		String result = "after " + n + " years, $" + currentValue + " saved at " + interest + "% will yield $"
+		String result = "After " + n + " years, $" + currentValue + " saved at " + interest + "% will yield $"
 				+ futureValue;
 
 		if (interest <= 100 && interest >= 0) {
