@@ -13,10 +13,12 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 		if (minutes < 10) { // if minutes is a single digit add 0 before the print
-			if (hours >= 0 && hours <= 12) {
+			if (hours >= 0 && hours < 12) {
 				System.out.println(hours + ":0" + minutes + " AM");
 			} else if (hours > 12 && hours < 24) {
 				hours = hours - 12;
+				System.out.println(hours + ":0" + minutes + " PM");
+			} else if (hours == 12) {
 				System.out.println(hours + ":0" + minutes + " PM");
 			} else {
 				System.out.println("Error: Hours must be between 0 and 23.");
